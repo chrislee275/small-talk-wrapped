@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.next/
+.vite/
+.vinext/
+next-env.d.ts
+*.tsbuildinfo
+.env*
+test-results/
+playwright-report/
+.DS_Store

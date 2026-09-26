@@ -1,0 +1,505 @@
+{
+  "revision": "demo-1",
+  "provenance": "FICTIONAL_DEMO",
+  "period": "2031—2033",
+  "people": [
+    {
+      "id": "milo",
+      "name": "Milo",
+      "color": "#ab4b4e",
+      "messages": 864,
+      "activeYear": 2032,
+      "rank": 1,
+      "achievement": "长话短收",
+      "role": "说明书编写员",
+      "signature": "paper",
+      "signatureScreen": "S25"
+    },
+    {
+      "id": "nora",
+      "name": "Nora",
+      "color": "#477063",
+      "messages": 702,
+      "activeYear": 2033,
+      "rank": 2,
+      "achievement": "计划保持弹性",
+      "role": "行程修改员",
+      "signature": "checklist",
+      "signatureScreen": "S25"
+    },
+    {
+      "id": "theo",
+      "name": "Theo",
+      "color": "#536fa0",
+      "messages": 519,
+      "activeYear": 2031,
+      "rank": 3,
+      "achievement": "重新开始也算进度",
+      "role": "按钮探索员",
+      "signature": "restart",
+      "signatureScreen": "S26"
+    }
+  ],
+  "common": [
+    {
+      "id": "S00",
+      "title": "小事，也值得回放。",
+      "eyebrow": "BIW WRAPPED / FICTIONAL DEMO",
+      "blocks": [
+        ["narration", "三个人，一本从没写完的日常说明书。"],
+        [
+          "narration",
+          "虚构演示：人物、对白、年份与统计均为创作，不代表真实记录。"
+        ]
+      ]
+    },
+    {
+      "id": "S01",
+      "title": "今天从谁开始？",
+      "eyebrow": "CHOOSE A PERSPECTIVE",
+      "blocks": [["narration", "同一个小群，三个不同视角。"]]
+    },
+    {
+      "id": "S02",
+      "title": "视角已就位。",
+      "eyebrow": "READY WHEN YOU ARE",
+      "blocks": [["narration", "不用赶。回忆不会自己翻页。"]]
+    },
+    {
+      "id": "S03",
+      "title": "先把日历翻回去。",
+      "eyebrow": "2031 / CHAPTER ONE",
+      "blocks": [
+        ["narration", "故事从一个还没有名字的小群开始。"],
+        ["punchline", "唯一共同点：大家都觉得自己很有条理。"]
+      ]
+    },
+    {
+      "id": "S04",
+      "title": "成立时的愿望。",
+      "eyebrow": "2031 / THE FIRST NOTE",
+      "blocks": [
+        ["systemEvent", "「周末修补社」已建立。"],
+        ["directQuote", "这里专门讨论有用的事。", "nora"],
+        ["directQuote", "那表情包算工具吗？", "theo"],
+        ["punchline", "第一项议题，暂未通过。"]
+      ]
+    },
+    {
+      "id": "S05",
+      "title": "名字先变得忙碌。",
+      "eyebrow": "2031 / RENAMING DEPARTMENT",
+      "interaction": "montage",
+      "blocks": [
+        [
+          "narration",
+          "最初只是想找个地方记下周末的小计划。后来有人修了台灯，有人研究收纳，还有人把购物清单写成了一篇文章。"
+        ],
+        [
+          "narration",
+          "事情越记越多，群名也跟着换了几轮。往下看看，它最终变成了什么。"
+        ],
+        ["systemEvent", "周末修补社"],
+        ["systemEvent", "螺丝暂存处"],
+        ["systemEvent", "明天再整理"],
+        ["punchline", "改名很勤快，整理还没开始。"]
+      ]
+    },
+    {
+      "id": "S06",
+      "title": "置顶消息。",
+      "eyebrow": "2031 / PINNED",
+      "blocks": [
+        ["narration", "Nora 把整理守则放到了最上面。"],
+        ["personAction", "Theo 认真收藏。"],
+        ["punchline", "收藏夹也需要整理。"]
+      ]
+    },
+    {
+      "id": "S07",
+      "title": "一个很短的问题。",
+      "eyebrow": "2031 / QUICK QUESTION",
+      "blocks": [
+        ["directQuote", "胶带放在哪里？", "theo"],
+        ["personAction", "Milo 开始介绍标签系统。"],
+        ["punchline", "问题很短，答案有目录。"]
+      ]
+    },
+    {
+      "id": "S08",
+      "title": "语气与动作。",
+      "eyebrow": "2031 / CHAT LOG",
+      "blocks": [
+        ["directQuote", "我已经整理好了。", "milo"],
+        ["personAction", "Milo 把桌上的盒子移到椅子上。"],
+        ["systemEvent", "Nora 更新了待办事项。"],
+        ["punchline", "桌面确实干净了。"]
+      ]
+    },
+    {
+      "id": "S09",
+      "title": "周末计划。",
+      "eyebrow": "2032 / A NEW PAGE",
+      "blocks": [
+        ["narration", "三个人决定一起做点小东西。"],
+        ["personAction", "Nora 画流程。Milo 写说明。Theo 负责试用。"],
+        ["punchline", "试用品还没有，分工已经完成。"]
+      ]
+    },
+    {
+      "id": "S10",
+      "title": "桌面布局。",
+      "eyebrow": "2032 / DESIGN REVIEW",
+      "blocks": [
+        ["directQuote", "空一点，看起来舒服。", "nora"],
+        ["personAction", "Theo 关掉了所有窗口。"],
+        ["punchline", "工作也一起看不见了。"]
+      ]
+    },
+    {
+      "id": "S11",
+      "title": "买之前。",
+      "eyebrow": "2032 / RESEARCH",
+      "blocks": [
+        ["narration", "Milo 比较了几种收纳盒。"],
+        ["directQuote", "我做了一个表。", "milo"],
+        ["directQuote", "盒子要放什么？", "nora"],
+        ["punchline", "先放这个表。"]
+      ]
+    },
+    {
+      "id": "S12",
+      "title": "到货之后。",
+      "eyebrow": "2032 / UNBOXING",
+      "blocks": [
+        ["personAction", "Theo 打开了新的标签机。"],
+        ["directQuote", "先给它贴个名字。", "theo"],
+        ["punchline", "标签机，成了第一个被管理的对象。"]
+      ]
+    },
+    {
+      "id": "S13",
+      "title": "整理完了吗？",
+      "eyebrow": "2033 / FOLLOW-UP",
+      "blocks": [
+        ["directQuote", "已经很接近了。", "nora"],
+        ["narration", "新的盒子排得很整齐。"],
+        ["punchline", "旧东西在盒子旁边。"]
+      ]
+    },
+    {
+      "id": "S14",
+      "title": "换个角度看看。",
+      "eyebrow": "GROUP WRAPPED",
+      "blocks": [
+        ["narration", "小事没少发生。下面这些数字，也是为了这个演示编写的。"]
+      ]
+    },
+    {
+      "id": "S15",
+      "title": "消息量，不等于工作量。",
+      "eyebrow": "FICTIONAL DATA / THREE PEOPLE",
+      "blocks": [
+        ["narration", "这份样例统计里，谁最爱打字？"],
+        ["punchline", "打字最多的人，并没有多领一把椅子。"]
+      ]
+    },
+    {
+      "id": "S16",
+      "title": "讨论的范围。",
+      "eyebrow": "A SMALL CHAT ABOUT EVERYTHING",
+      "interaction": "chat",
+      "blocks": [
+        ["narration", "一个小问题，总能长出几个分支。"],
+        ["directQuote", "架子放哪边？", "nora"],
+        ["directQuote", "先看光线。", "milo"],
+        ["directQuote", "我先坐一下。", "theo"],
+        ["directQuote", "你坐的是架子的位置。", "nora"],
+        ["punchline", "测量工具：一个人。"]
+      ]
+    },
+    {
+      "id": "S17",
+      "title": "消息来回。",
+      "eyebrow": "LEFT / RIGHT / REPEAT",
+      "interaction": "chat",
+      "blocks": [
+        ["narration", "关于新群图标的一次讨论。"],
+        ["directQuote", "做个简洁的。", "milo"],
+        ["directQuote", "一个方块？", "theo"],
+        ["directQuote", "至少有个颜色吧。", "nora"],
+        ["punchline", "于是多开了一轮颜色讨论。"]
+      ]
+    },
+    {
+      "id": "S18",
+      "title": "一张纸的行程。",
+      "eyebrow": "TIMELINE / FICTIONAL",
+      "interaction": "timeline",
+      "blocks": [
+        ["narration", "从灵感到归档，只用了一个下午。"],
+        ["timestamp", "14:06 · 写下草图。"],
+        ["timestamp", "14:24 · 重新描线。"],
+        ["timestamp", "14:41 · 找不到第一张纸。"],
+        ["punchline", "归档地点：待查。"]
+      ]
+    },
+    {
+      "id": "S19",
+      "title": "数量很重要。",
+      "eyebrow": "A SMALL MISMATCH",
+      "interaction": "quantity",
+      "quantity": { "planned": 4, "actual": 3 },
+      "blocks": [
+        ["narration", "Nora 带来四只空花盆，准备给阳台添点绿色。"],
+        ["stat", "拆开种子袋：三份。"],
+        ["punchline", "最后一只花盆，先负责收纳袋子。"]
+      ]
+    },
+    {
+      "id": "S20",
+      "title": "本期特别感谢。",
+      "eyebrow": "SMALL AWARDS",
+      "blocks": [
+        ["narration", "感谢写说明的人。"],
+        ["narration", "感谢改计划的人。"],
+        ["narration", "感谢勇于尝试的人。"],
+        ["punchline", "以及还没有散架的桌子。"]
+      ]
+    },
+    {
+      "id": "S21",
+      "title": "群聊到这里。",
+      "eyebrow": "A DIFFERENT PERSPECTIVE",
+      "blocks": [["narration", "接下来，把镜头留给一个人。"]]
+    },
+    {
+      "id": "S22",
+      "title": "你的那一页。",
+      "eyebrow": "PERSONAL WRAPPED",
+      "blocks": [["narration", "不是评语。只是几件值得再看一次的小事。"]]
+    },
+    {
+      "id": "S31",
+      "title": "小事还会继续。",
+      "eyebrow": "BIW WRAPPED / END OF DEMO",
+      "interaction": "ending",
+      "blocks": [
+        ["narration", "说明书可能写不完。"],
+        ["narration", "计划也可能改方向。"],
+        ["punchline", "但下一页，还可以一起写。"]
+      ]
+    }
+  ],
+  "personal": {
+    "milo": [
+      {
+        "id": "S23",
+        "title": "Milo 的文字库存。",
+        "blocks": [["narration", "把每件小事解释清楚，是一种天赋。"]]
+      },
+      {
+        "id": "S24",
+        "title": "标签的标签。",
+        "blocks": [
+          ["narration", "Milo 给盒子贴上分类标签。"],
+          ["directQuote", "这一盒放备用标签。", "milo"],
+          ["punchline", "分类系统开始照顾自己。"]
+        ]
+      },
+      {
+        "id": "S25",
+        "title": "一份浇水说明。",
+        "interaction": "paper",
+        "blocks": [
+          ["narration", "Milo 写了一份阳台浇水指南，连天气变化都有补充说明。"],
+          ["personAction", "纸卷展开，正文之后还有附录。"],
+          ["directQuote", "收到，今天下雨。", "nora"],
+          ["punchline", "说明很完整。今天用不上。"]
+        ]
+      },
+      {
+        "id": "S26",
+        "title": "快捷回复。",
+        "blocks": [
+          ["narration", "为了节省时间，Milo 准备了一段常用回复。"],
+          ["directQuote", "我补充一下。", "milo"],
+          ["punchline", "省下的是开头，没省下正文。"]
+        ]
+      },
+      {
+        "id": "S27",
+        "title": "目录更新。",
+        "blocks": [
+          ["narration", "笔记越写越厚，需要一份目录。"],
+          ["personAction", "Milo 在目录后加了使用说明。"],
+          ["punchline", "入口也有阅读门槛。"]
+        ]
+      },
+      {
+        "id": "S28",
+        "title": "最短的一次。",
+        "blocks": [
+          ["directQuote", "灯关了吗？", "nora"],
+          ["directQuote", "关了。", "milo"],
+          ["punchline", "这一次，没有附件。"]
+        ]
+      },
+      {
+        "id": "S29",
+        "title": "留给认真解释的人。",
+        "interaction": "unlock",
+        "blocks": [
+          ["narration", "日常不一定需要说明书，但有你就一定有。"],
+          ["punchline", "篇幅不设上限，耐心也是。"]
+        ]
+      },
+      {
+        "id": "S30",
+        "title": "Milo 的回顾卡。",
+        "blocks": [["narration", "把小事写清楚，把结尾留短一点。"]]
+      }
+    ],
+    "nora": [
+      {
+        "id": "S23",
+        "title": "Nora 的计划空间。",
+        "blocks": [["narration", "计划有方向，也留着修改的余地。"]]
+      },
+      {
+        "id": "S24",
+        "title": "日程里的空白。",
+        "blocks": [
+          ["narration", "Nora 留了一整段自由时间。"],
+          ["directQuote", "这段可以随意安排。", "nora"],
+          ["punchline", "然后给自由时间排了三个选项。"]
+        ]
+      },
+      {
+        "id": "S25",
+        "title": "完成了一部分。",
+        "interaction": "checklist",
+        "blocks": [
+          ["narration", "计划先给盆栽浇水，再把工具挂上墙。"],
+          ["personAction", "浇水：完成。"],
+          ["personAction", "挂工具：改到下次。"],
+          ["punchline", "进度是真的，墙还是空的。"]
+        ]
+      },
+      {
+        "id": "S26",
+        "title": "备用方案。",
+        "blocks": [
+          ["narration", "出门前，Nora 查了天气。"],
+          ["personAction", "晴天路线、雨天路线都准备好了。"],
+          ["punchline", "大家最后在门口聊了一个下午。"]
+        ]
+      },
+      {
+        "id": "S27",
+        "title": "命名习惯。",
+        "blocks": [
+          ["narration", "第一份计划叫最终版。"],
+          ["personAction", "第二份叫新的最终版。"],
+          ["punchline", "最后，文件夹叫暂定。"]
+        ]
+      },
+      {
+        "id": "S28",
+        "title": "真正完成。",
+        "blocks": [
+          ["narration", "清单终于只剩最后一项。"],
+          ["directQuote", "给今天的清单画个句号。", "nora"],
+          ["punchline", "这次真的画了。"]
+        ]
+      },
+      {
+        "id": "S29",
+        "title": "留给会改计划的人。",
+        "interaction": "unlock",
+        "blocks": [
+          ["narration", "不是每一步都照着走，依然可以往前。"],
+          ["punchline", "路线可修改，热情不用。"]
+        ]
+      },
+      {
+        "id": "S30",
+        "title": "Nora 的回顾卡。",
+        "blocks": [["narration", "完成一点，也值得留下一张。"]]
+      }
+    ],
+    "theo": [
+      {
+        "id": "S23",
+        "title": "Theo 的试用记录。",
+        "blocks": [
+          ["narration", "想知道按钮做什么，先问，再按。偶尔顺序相反。"]
+        ]
+      },
+      {
+        "id": "S24",
+        "title": "新的快捷键。",
+        "blocks": [
+          ["narration", "Theo 学会了隐藏窗口。"],
+          ["directQuote", "桌面一下就干净了。", "theo"],
+          ["punchline", "接下来的课程：找回来。"]
+        ]
+      },
+      {
+        "id": "S25",
+        "title": "保存位置。",
+        "blocks": [
+          ["personAction", "Theo 把草稿存到了一个新文件夹。"],
+          ["directQuote", "取个好记的名字。", "theo"],
+          ["punchline", "文件夹名字叫：这里。"]
+        ]
+      },
+      {
+        "id": "S26",
+        "title": "倒计时重新开始。",
+        "interaction": "restart",
+        "blocks": [
+          [
+            "narration",
+            "Theo 给泡茶计时器换了颜色。杯子已经摆好，计时还在继续。"
+          ],
+          ["personAction", "按下 Restart，计时器回到了起点。"],
+          ["directQuote", "颜色没变，等茶的时间变长了。", "theo"],
+          ["punchline", "测试成功，喝茶延后。"]
+        ]
+      },
+      {
+        "id": "S27",
+        "title": "试用报告。",
+        "blocks": [
+          ["narration", "Nora 问新按钮好不好用。"],
+          ["directQuote", "按得下去。", "theo"],
+          ["punchline", "报告简洁，但还需要第二轮测试。"]
+        ]
+      },
+      {
+        "id": "S28",
+        "title": "这次先看说明。",
+        "blocks": [
+          ["personAction", "Theo 打开 Milo 的指南。"],
+          ["directQuote", "我先泡杯茶。", "theo"],
+          ["punchline", "阅读准备，比操作充分。"]
+        ]
+      },
+      {
+        "id": "S29",
+        "title": "留给愿意尝试的人。",
+        "interaction": "unlock",
+        "blocks": [
+          ["narration", "一次试用，会带来一个新发现。"],
+          ["punchline", "包括：这个按钮，下次慢一点。"]
+        ]
+      },
+      {
+        "id": "S30",
+        "title": "Theo 的回顾卡。",
+        "blocks": [["narration", "重新开始，也是一种继续。"]]
+      }
+    ]
+  }
+}
