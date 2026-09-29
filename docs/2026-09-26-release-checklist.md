@@ -12,4 +12,4 @@ Updated 2026-09-29: the owner authorised source publication to GitHub account `c
 - [ ] Confirm no original-site links, private screenshots, source references or deployment identifiers have been added.
 - [ ] Push only this candidate's independent history to the approved public remote. Never push the original project's history here.
 
-No automatic publishing workflow is included. Deployment of a separate demo is a later, separately authorized action.
+No automatic publishing workflow is included. The owner separately authorised a public Sites demo on 2026-09-29; its link is in the README. Hosting configuration remains outside this source repository.

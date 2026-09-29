@@ -2,6 +2,8 @@
 
 The fictional portfolio edition of BIW Wrapped.
 
+**[Try the live demo](https://small-talk-wrapped.chrislee275.chatgpt.site)** — no sign-in required. All characters, stories and statistics are fictional.
+
 **A mobile-first interactive story that turns a fictional group chat into three personal retrospectives.**
 
 React · TypeScript · vinext
@@ -88,4 +90,4 @@ Browser tests cover the three journeys, boundary states and viewport scenarios. 
 
 This is a portfolio candidate, not a general-purpose CMS or analytics product. The vinext dependency is pinned to a beta release; no hosting workflow or automated deployment is provided. Synthetic data demonstrates interaction design, not real-world group analysis.
 
-Source publication is authorised under `chrislee275/small-talk-wrapped`. No hosted demo is provided. No open-source license has been selected; this repository does not grant a general license to reuse its code or artwork. Third-party packages retain their respective licenses; see [notices](THIRD_PARTY_NOTICES.md).
+Source publication is authorised under `chrislee275/small-talk-wrapped`. The live demo is hosted separately on Sites; account-specific hosting configuration and credentials are not required to run this repository. No open-source license has been selected; this repository does not grant a general license to reuse its code or artwork. Third-party packages retain their respective licenses; see [notices](THIRD_PARTY_NOTICES.md).

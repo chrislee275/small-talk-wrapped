@@ -36,8 +36,14 @@ const rules = [
 ];
 let count = 0;
 function check(text, label) {
+  // The owner-approved fictional demo link is public; all other Sites URLs
+  // remain disallowed to avoid exposing the original project.
+  const scanned = text.replace(
+    /https:\/\/small-talk-wrapped\.chrislee275\.chatgpt\.site(?=$|[\s/"')?#])/g,
+    "[approved-public-demo]",
+  );
   for (const rule of rules)
-    if (rule.test(text))
+    if (rule.test(scanned))
       throw new Error(
         `Public audit: forbidden identifier or secret-like value in ${label}`,
       );
