@@ -2,7 +2,7 @@
 
 ## Content and rendering
 
-`content/demo.json` is the sole authoring source. The deterministic generator validates coverage, assigns templates/themes and writes the typed generated module. It never searches parent directories or reads chat archives. `FICTIONAL_DEMO` and `demo-1` replace any real-record verification claims.
+`content/demo.json` is the sole authoring source for story blocks and character data. Navigation labels and interaction-prop text remain in their UI components. The deterministic generator validates coverage, assigns templates/themes and writes the typed generated module. It never searches parent directories or reads chat archives. `FICTIONAL_DEMO` and `demo-1` replace any real-record verification claims.
 
 The model retains ScreenId, PersonId, StoryScreen, explicit block kinds and templates A–G. Quote bubbles require an explicit fictional speaker ID; names in prose are not parsed as attribution. Templates map to entry, chronicle, evidence, personal story, achievement, export and ending surfaces.
 
@@ -17,6 +17,8 @@ The screen component remounts on navigation. Completed reveals are remembered wi
 ## Motion and input
 
 Ordinary sequences begin with one visible beat. Later content waits for visibility and remaining reading time, with a longer final-beat hold. The name montage is separately visibility-gated and pauses when offscreen. Reduced motion displays passive content directly; signature buttons still work but bypass their animated wait. Show All bypasses every sequence.
+
+The English edition uses word-based reading holds (250 ms per word, bounded to 650–6000 ms, plus a 700 ms final-beat pause). These are presentation defaults, not measured reading speeds. Canvas captions wrap at word boundaries using measured font widths. The credits container grows with its content so larger English text is not clipped.
 
 The neutral ScrollGate policy was selected from the original project's generic implementation. A gesture must start at the bottom; the scroll that reaches the bottom is not navigation. Wheel inertia needs a separate sustained burst, and interactive controls do not trigger gesture navigation. Keyboard and visible buttons remain the primary alternatives.
 

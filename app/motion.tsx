@@ -154,7 +154,7 @@ export function NameMontage({
         names.map((name) => <p key={name}>{name}</p>)
       ) : (
         <p className="montage-current" key={index}>
-          {index < 0 ? "群名记录 · 等你往下看" : names[index]}
+          {index < 0 ? "Scroll down for the name history" : names[index]}
         </p>
       )}
       <span className="dots" aria-hidden="true">

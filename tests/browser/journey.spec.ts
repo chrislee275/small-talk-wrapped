@@ -2,16 +2,14 @@ import { test, expect, type Page } from "@playwright/test";
 import { readFile } from "node:fs/promises";
 async function choose(page: Page, name = "Milo") {
   await page.goto("/");
-  await page.getByRole("button", { name: "打开这本日常" }).click();
+  await page.getByRole("button", { name: "Open the story" }).click();
   await expect(page.locator("main")).toHaveAttribute("data-screen", "S01");
-  await expect(
-    page.getByRole("button", { name: "选好了，继续" }),
-  ).toBeDisabled();
+  await expect(page.getByRole("button", { name: "Continue" })).toBeDisabled();
   await page.getByRole("radio", { name: new RegExp(name) }).check();
-  await page.getByRole("button", { name: "选好了，继续" }).click();
+  await page.getByRole("button", { name: "Continue" }).click();
 }
 async function reveal(page: Page) {
-  const all = page.getByRole("button", { name: "显示全部", exact: true });
+  const all = page.getByRole("button", { name: "Show all", exact: true });
   if (await all.count()) {
     try {
       await all.click({ timeout: 750 });
@@ -22,7 +20,7 @@ async function reveal(page: Page) {
 }
 async function advance(page: Page) {
   await reveal(page);
-  await page.getByRole("button", { name: "下一屏", exact: true }).click();
+  await page.getByRole("button", { name: "Next screen", exact: true }).click();
 }
 async function to(page: Page, id: string) {
   for (
@@ -48,11 +46,11 @@ test("quantity reveal, desktop layout and pausable ending", async ({
   await choose(page, "Theo");
   await to(page, "S19");
   await expect(page.locator(".quantity .big-number")).toHaveText("?");
-  await page.getByRole("button", { name: "拆开看看" }).click();
+  await page.getByRole("button", { name: "Open the package" }).click();
   await expect(page.locator(".quantity .big-number")).toHaveText("3");
   await expect(page.locator(".seeds span[data-visible=true]")).toHaveCount(3);
   await to(page, "S31");
-  await page.getByRole("button", { name: "暂停字幕" }).click();
+  await page.getByRole("button", { name: "Pause credits" }).click();
   const before = await page
     .locator(".credits")
     .evaluate((node) => getComputedStyle(node).transform);
@@ -62,10 +60,13 @@ test("quantity reveal, desktop layout and pausable ending", async ({
       .locator(".credits")
       .evaluate((node) => getComputedStyle(node).transform),
   ).toBe(before);
-  await page.getByRole("button", { name: "继续字幕" }).click();
-  await expect(page.getByRole("button", { name: "暂停字幕" })).toHaveCount(0, {
-    timeout: 12000,
-  });
+  await page.getByRole("button", { name: "Resume credits" }).click();
+  await expect(page.getByRole("button", { name: "Pause credits" })).toHaveCount(
+    0,
+    {
+      timeout: 12000,
+    },
+  );
   await expect(page.locator("main")).toHaveAttribute("data-screen", "S31");
   await noOverflow(page);
   await page.screenshot({
@@ -94,7 +95,9 @@ test("three full routes, independent branches, download and ending actions", asy
       await noOverflow(page);
       if (i === 30) {
         const download = page.waitForEvent("download");
-        await page.getByRole("button", { name: "这张值得一个Story" }).click();
+        await page
+          .getByRole("button", { name: "Story-worthy. Save it." })
+          .click();
         const file = await download;
         expect(file.suggestedFilename()).toBe(`BIW-Demo-${name}.png`);
         const bytes = await readFile((await file.path())!);
@@ -106,12 +109,10 @@ test("three full routes, independent branches, download and ending actions", asy
     }
     await expect(page.locator("main")).toHaveAttribute("data-screen", "S31");
     await reveal(page);
-    await page.getByRole("button", { name: "换个视角继续看" }).click();
-    await expect(
-      page.getByRole("button", { name: "选好了，继续" }),
-    ).toBeDisabled();
+    await page.getByRole("button", { name: "Try another perspective" }).click();
+    await expect(page.getByRole("button", { name: "Continue" })).toBeDisabled();
     await page.getByRole("radio", { name: /Nora/ }).check();
-    await page.getByRole("button", { name: "选好了，继续" }).click();
+    await page.getByRole("button", { name: "Continue" }).click();
     await expect(page.locator("main")).toHaveAttribute("data-screen", "S23");
     await page.goBack();
     await expect(page.locator("main")).toHaveAttribute("data-screen", "S01");
@@ -119,7 +120,7 @@ test("three full routes, independent branches, download and ending actions", asy
     await expect(page.locator("main")).toHaveAttribute("data-screen", "S00");
     await choose(page, "Nora");
     await to(page, "S31");
-    await page.getByRole("button", { name: "从开头再看" }).click();
+    await page.getByRole("button", { name: "Start again" }).click();
     await expect(page.locator("main")).toHaveAttribute("data-screen", "S00");
   }
   expect(errors).toEqual([]);
@@ -128,20 +129,20 @@ test("Back, refresh, keyboard, image failure and screenshots", async ({
   page,
 }) => {
   await page.goto("/");
-  await page.getByRole("button", { name: "打开这本日常" }).click();
+  await page.getByRole("button", { name: "Open the story" }).click();
   await page.getByRole("radio", { name: /Milo/ }).focus();
   await page.keyboard.press("Space");
   await expect(page.getByRole("radio", { name: /Milo/ })).toBeChecked();
   await page.screenshot({ path: "docs/images/selection.png", fullPage: true });
-  await page.getByRole("button", { name: "选好了，继续" }).click();
+  await page.getByRole("button", { name: "Continue" }).click();
   await advance(page);
-  await page.getByRole("button", { name: "返回上一屏" }).click();
+  await page.getByRole("button", { name: "Previous screen" }).click();
   await expect(page.locator("main")).toHaveAttribute("data-screen", "S02");
   await page.reload();
   await expect(page.locator("main")).toHaveAttribute("data-screen", "S00");
   await choose(page);
   await to(page, "S25");
-  await page.getByRole("button", { name: "展开说明" }).click();
+  await page.getByRole("button", { name: "Unroll the guide" }).click();
   await expect(page.locator(".signature")).toHaveAttribute("data-stage", "3");
   await page.screenshot({
     path: "docs/images/interaction.png",
@@ -151,7 +152,7 @@ test("Back, refresh, keyboard, image failure and screenshots", async ({
   await page.screenshot({ path: "docs/images/share-card.png", fullPage: true });
   await page.route("**/avatars/*.svg", (route) => route.abort());
   await page.goto("/");
-  await page.getByRole("button", { name: "打开这本日常" }).click();
+  await page.getByRole("button", { name: "Open the story" }).click();
   await expect(page.locator(".portrait").first()).toContainText("M");
   await noOverflow(page);
 });
@@ -185,13 +186,13 @@ test("S05 does not run before visibility and pauses offscreen", async ({
     .locator(".montage")
     .evaluate((node) => node.scrollIntoView({ block: "center" }));
   await expect(
-    page.getByText("改名很勤快，整理还没开始。", { exact: true }),
+    page.getByText("Plenty of renaming. Still no tidying.", { exact: true }),
   ).toBeVisible({ timeout: 10000 });
   await expect(page.locator("main")).toHaveAttribute("data-screen", "S05");
 });
 test("signature actions, achievement and reduced motion", async ({ page }) => {
   for (const [name, id, button] of [
-    ["Nora", "S25", "开始揭晓"],
+    ["Nora", "S25", "Reveal the results"],
     ["Theo", "S26", "Restart"],
   ]) {
     await choose(page, name);
@@ -201,7 +202,7 @@ test("signature actions, achievement and reduced motion", async ({ page }) => {
     await expect(page.locator(".signature")).toHaveAttribute("data-stage", "3");
     await to(page, "S29");
     await expect(page.locator(".achievement-after")).toHaveCount(0);
-    await page.getByRole("button", { name: "点击解锁成就" }).click();
+    await page.getByRole("button", { name: "Unlock achievement" }).click();
     await expect(page.locator(".achievement-after")).toBeVisible();
   }
   await page.emulateMedia({ reducedMotion: "reduce" });
@@ -221,10 +222,10 @@ test("320/360/390, text zoom and scroll-first behavior", async ({ page }) => {
     });
     await noOverflow(page);
     await page
-      .getByRole("button", { name: "下一屏", exact: true })
+      .getByRole("button", { name: "Next screen", exact: true })
       .scrollIntoViewIfNeeded();
     await expect(
-      page.getByRole("button", { name: "下一屏", exact: true }),
+      page.getByRole("button", { name: "Next screen", exact: true }),
     ).toBeVisible();
     await page.evaluate(() => {
       document.documentElement.style.fontSize = "";

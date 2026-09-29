@@ -8,8 +8,8 @@ export const PEOPLE: DemoPerson[] = [
     "messages": 864,
     "activeYear": 2032,
     "rank": 1,
-    "achievement": "长话短收",
-    "role": "说明书编写员",
+    "achievement": "Appendix Included",
+    "role": "Resident Manual Writer",
     "signature": "paper",
     "signatureScreen": "S25"
   },
@@ -20,8 +20,8 @@ export const PEOPLE: DemoPerson[] = [
     "messages": 702,
     "activeYear": 2033,
     "rank": 2,
-    "achievement": "计划保持弹性",
-    "role": "行程修改员",
+    "achievement": "Plans Can Change",
+    "role": "Plan Revision Officer",
     "signature": "checklist",
     "signatureScreen": "S25"
   },
@@ -32,8 +32,8 @@ export const PEOPLE: DemoPerson[] = [
     "messages": 519,
     "activeYear": 2031,
     "rank": 3,
-    "achievement": "重新开始也算进度",
-    "role": "按钮探索员",
+    "achievement": "Progress, Restarted",
+    "role": "Button Explorer",
     "signature": "restart",
     "signatureScreen": "S26"
   }
@@ -42,17 +42,17 @@ export const PERIOD = "2031—2033";
 export const SCREENS: StoryScreen[] = [
   {
     "id": "S00",
-    "title": "小事，也值得回放。",
+    "title": "Small things. Worth a replay.",
     "eyebrow": "BIW WRAPPED / FICTIONAL DEMO",
     "blocks": [
       {
         "kind": "narration",
-        "text": "三个人，一本从没写完的日常说明书。",
+        "text": "Three friends. One unfinished guide to everyday life.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "narration",
-        "text": "虚构演示：人物、对白、年份与统计均为创作，不代表真实记录。",
+        "text": "Fictional demo: all characters, dialogue, dates and statistics are invented.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -65,12 +65,12 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S01",
-    "title": "今天从谁开始？",
+    "title": "Whose side of the story?",
     "eyebrow": "CHOOSE A PERSPECTIVE",
     "blocks": [
       {
         "kind": "narration",
-        "text": "同一个小群，三个不同视角。",
+        "text": "One small group chat. Three different perspectives.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -83,12 +83,12 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S02",
-    "title": "视角已就位。",
+    "title": "You're all set.",
     "eyebrow": "READY WHEN YOU ARE",
     "blocks": [
       {
         "kind": "narration",
-        "text": "不用赶。回忆不会自己翻页。",
+        "text": "Take your time. These pages won't turn themselves.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -101,17 +101,17 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S03",
-    "title": "先把日历翻回去。",
+    "title": "Let's turn back the calendar.",
     "eyebrow": "2031 / CHAPTER ONE",
     "blocks": [
       {
         "kind": "narration",
-        "text": "故事从一个还没有名字的小群开始。",
+        "text": "It started with a group chat that didn't have a name yet.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "唯一共同点：大家都觉得自己很有条理。",
+        "text": "One thing in common: everyone thought they were organised.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -124,29 +124,29 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S04",
-    "title": "成立时的愿望。",
+    "title": "Good intentions.",
     "eyebrow": "2031 / THE FIRST NOTE",
     "blocks": [
       {
         "kind": "systemEvent",
-        "text": "「周末修补社」已建立。",
+        "text": "“Weekend Fixers” was created.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "这里专门讨论有用的事。",
+        "text": "Let's keep this chat for useful things.",
         "speakerId": "nora",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "那表情包算工具吗？",
+        "text": "Do memes count as tools?",
         "speakerId": "theo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "第一项议题，暂未通过。",
+        "text": "First agenda item: unresolved.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -159,38 +159,38 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S05",
-    "title": "名字先变得忙碌。",
+    "title": "A busy naming department.",
     "eyebrow": "2031 / RENAMING DEPARTMENT",
     "interaction": "montage",
     "blocks": [
       {
         "kind": "narration",
-        "text": "最初只是想找个地方记下周末的小计划。后来有人修了台灯，有人研究收纳，还有人把购物清单写成了一篇文章。",
+        "text": "It was supposed to be a place for small weekend plans. Someone fixed a lamp. Someone researched storage boxes. Someone turned a shopping list into an essay.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "narration",
-        "text": "事情越记越多，群名也跟着换了几轮。往下看看，它最终变成了什么。",
+        "text": "As the plans piled up, the group tried a few new names. Scroll down to see where they landed.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "systemEvent",
-        "text": "周末修补社",
+        "text": "Weekend Fixers",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "systemEvent",
-        "text": "螺丝暂存处",
+        "text": "Spare Screw Storage",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "systemEvent",
-        "text": "明天再整理",
+        "text": "Tidy Up Tomorrow",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "改名很勤快，整理还没开始。",
+        "text": "Plenty of renaming. Still no tidying.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -202,22 +202,22 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S06",
-    "title": "置顶消息。",
+    "title": "Pinned for later.",
     "eyebrow": "2031 / PINNED",
     "blocks": [
       {
         "kind": "narration",
-        "text": "Nora 把整理守则放到了最上面。",
+        "text": "Nora pinned the tidying checklist.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "personAction",
-        "text": "Theo 认真收藏。",
+        "text": "Theo carefully bookmarked it.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "收藏夹也需要整理。",
+        "text": "The bookmarks needed tidying too.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -230,23 +230,23 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S07",
-    "title": "一个很短的问题。",
+    "title": "A quick question.",
     "eyebrow": "2031 / QUICK QUESTION",
     "blocks": [
       {
         "kind": "directQuote",
-        "text": "胶带放在哪里？",
+        "text": "Where's the tape?",
         "speakerId": "theo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "personAction",
-        "text": "Milo 开始介绍标签系统。",
+        "text": "Milo began explaining the labelling system.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "问题很短，答案有目录。",
+        "text": "A short question. An answer with a contents page.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -259,28 +259,28 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S08",
-    "title": "语气与动作。",
+    "title": "Technically tidy.",
     "eyebrow": "2031 / CHAT LOG",
     "blocks": [
       {
         "kind": "directQuote",
-        "text": "我已经整理好了。",
+        "text": "I've sorted everything.",
         "speakerId": "milo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "personAction",
-        "text": "Milo 把桌上的盒子移到椅子上。",
+        "text": "Milo moved the boxes from the desk to the chair.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "systemEvent",
-        "text": "Nora 更新了待办事项。",
+        "text": "Nora updated the to-do list.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "桌面确实干净了。",
+        "text": "The desk was, technically, clear.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -293,22 +293,22 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S09",
-    "title": "周末计划。",
+    "title": "The weekend project.",
     "eyebrow": "2032 / A NEW PAGE",
     "blocks": [
       {
         "kind": "narration",
-        "text": "三个人决定一起做点小东西。",
+        "text": "They decided to build something together.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "personAction",
-        "text": "Nora 画流程。Milo 写说明。Theo 负责试用。",
+        "text": "Nora planned the steps. Milo wrote instructions. Theo volunteered to test it.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "试用品还没有，分工已经完成。",
+        "text": "Nothing to test yet. Roles fully assigned.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -321,23 +321,23 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S10",
-    "title": "桌面布局。",
+    "title": "A cleaner desktop.",
     "eyebrow": "2032 / DESIGN REVIEW",
     "blocks": [
       {
         "kind": "directQuote",
-        "text": "空一点，看起来舒服。",
+        "text": "A bit more empty space would be nice.",
         "speakerId": "nora",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "personAction",
-        "text": "Theo 关掉了所有窗口。",
+        "text": "Theo closed every window.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "工作也一起看不见了。",
+        "text": "The work disappeared too.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -350,29 +350,29 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S11",
-    "title": "买之前。",
+    "title": "Before buying anything.",
     "eyebrow": "2032 / RESEARCH",
     "blocks": [
       {
         "kind": "narration",
-        "text": "Milo 比较了几种收纳盒。",
+        "text": "Milo compared a few storage boxes.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "我做了一个表。",
+        "text": "I've made a comparison chart.",
         "speakerId": "milo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "盒子要放什么？",
+        "text": "What goes in the box?",
         "speakerId": "nora",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "先放这个表。",
+        "text": "For now, the chart.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -385,23 +385,23 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S12",
-    "title": "到货之后。",
+    "title": "Unboxing.",
     "eyebrow": "2032 / UNBOXING",
     "blocks": [
       {
         "kind": "personAction",
-        "text": "Theo 打开了新的标签机。",
+        "text": "Theo opened the new label maker.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "先给它贴个名字。",
+        "text": "Let's put its name on it first.",
         "speakerId": "theo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "标签机，成了第一个被管理的对象。",
+        "text": "The label maker became its own first assignment.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -414,23 +414,23 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S13",
-    "title": "整理完了吗？",
+    "title": "Are we tidy yet?",
     "eyebrow": "2033 / FOLLOW-UP",
     "blocks": [
       {
         "kind": "directQuote",
-        "text": "已经很接近了。",
+        "text": "Almost there.",
         "speakerId": "nora",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "narration",
-        "text": "新的盒子排得很整齐。",
+        "text": "The new boxes were neatly lined up.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "旧东西在盒子旁边。",
+        "text": "The old stuff was next to them.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -443,12 +443,12 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S14",
-    "title": "换个角度看看。",
+    "title": "A different kind of count.",
     "eyebrow": "GROUP WRAPPED",
     "blocks": [
       {
         "kind": "narration",
-        "text": "小事没少发生。下面这些数字，也是为了这个演示编写的。",
+        "text": "A lot of little things happened. The numbers coming up are fictional too.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -461,17 +461,17 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S15",
-    "title": "消息量，不等于工作量。",
+    "title": "Messages sent. Tasks pending.",
     "eyebrow": "FICTIONAL DATA / THREE PEOPLE",
     "blocks": [
       {
         "kind": "narration",
-        "text": "这份样例统计里，谁最爱打字？",
+        "text": "In this sample group, who did the most typing?",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "打字最多的人，并没有多领一把椅子。",
+        "text": "The messages were finished. The to-do list wasn't.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -484,42 +484,42 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S16",
-    "title": "讨论的范围。",
+    "title": "A small question.",
     "eyebrow": "A SMALL CHAT ABOUT EVERYTHING",
     "interaction": "chat",
     "blocks": [
       {
         "kind": "narration",
-        "text": "一个小问题，总能长出几个分支。",
+        "text": "Every small question finds a way to branch out.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "架子放哪边？",
+        "text": "Where should the shelf go?",
         "speakerId": "nora",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "先看光线。",
+        "text": "Let's check the light first.",
         "speakerId": "milo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "我先坐一下。",
+        "text": "I'll just sit here a minute.",
         "speakerId": "theo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "你坐的是架子的位置。",
+        "text": "That's where the shelf goes.",
         "speakerId": "nora",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "测量工具：一个人。",
+        "text": "Measuring equipment: one person.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -531,36 +531,36 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S17",
-    "title": "消息来回。",
+    "title": "Back and forth.",
     "eyebrow": "LEFT / RIGHT / REPEAT",
     "interaction": "chat",
     "blocks": [
       {
         "kind": "narration",
-        "text": "关于新群图标的一次讨论。",
+        "text": "A discussion about the new group icon.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "做个简洁的。",
+        "text": "Something simple.",
         "speakerId": "milo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "一个方块？",
+        "text": "A square?",
         "speakerId": "theo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "至少有个颜色吧。",
+        "text": "At least give it a colour.",
         "speakerId": "nora",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "于是多开了一轮颜色讨论。",
+        "text": "That opened a whole new discussion.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -572,33 +572,33 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S18",
-    "title": "一张纸的行程。",
+    "title": "One sheet of paper.",
     "eyebrow": "TIMELINE / FICTIONAL",
     "interaction": "timeline",
     "blocks": [
       {
         "kind": "narration",
-        "text": "从灵感到归档，只用了一个下午。",
+        "text": "From inspiration to filing, all in one afternoon.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "timestamp",
-        "text": "14:06 · 写下草图。",
+        "text": "14:06 · Sketch an idea.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "timestamp",
-        "text": "14:24 · 重新描线。",
+        "text": "14:24 · Draw a cleaner version.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "timestamp",
-        "text": "14:41 · 找不到第一张纸。",
+        "text": "14:41 · Lose the first sheet.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "归档地点：待查。",
+        "text": "Filed under: location unknown.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -610,7 +610,7 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S19",
-    "title": "数量很重要。",
+    "title": "A small mismatch.",
     "eyebrow": "A SMALL MISMATCH",
     "interaction": "quantity",
     "quantity": {
@@ -620,17 +620,17 @@ export const SCREENS: StoryScreen[] = [
     "blocks": [
       {
         "kind": "narration",
-        "text": "Nora 带来四只空花盆，准备给阳台添点绿色。",
+        "text": "Nora brought four plant pots. Each needed its own drip tray.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "stat",
-        "text": "拆开种子袋：三份。",
+        "text": "Inside the package: three trays.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "最后一只花盆，先负责收纳袋子。",
+        "text": "Pot number four moved into the sink.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -642,27 +642,27 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S20",
-    "title": "本期特别感谢。",
+    "title": "Special thanks.",
     "eyebrow": "SMALL AWARDS",
     "blocks": [
       {
         "kind": "narration",
-        "text": "感谢写说明的人。",
+        "text": "To the one who wrote the instructions.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "narration",
-        "text": "感谢改计划的人。",
+        "text": "To the one who revised the plans.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "narration",
-        "text": "感谢勇于尝试的人。",
+        "text": "To the one who tried things out.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "以及还没有散架的桌子。",
+        "text": "And to the desk, for staying in one piece.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -675,12 +675,12 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S21",
-    "title": "群聊到这里。",
+    "title": "That's the group story.",
     "eyebrow": "A DIFFERENT PERSPECTIVE",
     "blocks": [
       {
         "kind": "narration",
-        "text": "接下来，把镜头留给一个人。",
+        "text": "Now let's give one person the spotlight.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -693,12 +693,12 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S22",
-    "title": "你的那一页。",
+    "title": "Your page.",
     "eyebrow": "PERSONAL WRAPPED",
     "blocks": [
       {
         "kind": "narration",
-        "text": "不是评语。只是几件值得再看一次的小事。",
+        "text": "Not a performance review. Just a few small things worth another look.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -711,23 +711,23 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S31",
-    "title": "小事还会继续。",
+    "title": "More small things ahead.",
     "eyebrow": "BIW WRAPPED / END OF DEMO",
     "interaction": "ending",
     "blocks": [
       {
         "kind": "narration",
-        "text": "说明书可能写不完。",
+        "text": "The instructions might never be finished.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "narration",
-        "text": "计划也可能改方向。",
+        "text": "The plans might change direction.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "但下一页，还可以一起写。",
+        "text": "But we can still write the next page together.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -739,11 +739,11 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S23",
-    "title": "Milo 的文字库存。",
+    "title": "Milo, in many words.",
     "blocks": [
       {
         "kind": "narration",
-        "text": "把每件小事解释清楚，是一种天赋。",
+        "text": "Explaining every little thing is a talent.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -757,22 +757,22 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S24",
-    "title": "标签的标签。",
+    "title": "Labels for labels.",
     "blocks": [
       {
         "kind": "narration",
-        "text": "Milo 给盒子贴上分类标签。",
+        "text": "Milo labelled every storage box.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "这一盒放备用标签。",
+        "text": "This one holds the spare labels.",
         "speakerId": "milo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "分类系统开始照顾自己。",
+        "text": "The system had started organising itself.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -786,28 +786,28 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S25",
-    "title": "一份浇水说明。",
+    "title": "A watering guide.",
     "interaction": "paper",
     "blocks": [
       {
         "kind": "narration",
-        "text": "Milo 写了一份阳台浇水指南，连天气变化都有补充说明。",
+        "text": "Milo wrote a balcony watering guide. It started with how to hold the watering can.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "personAction",
-        "text": "纸卷展开，正文之后还有附录。",
+        "text": "The paper unrolled. After the instructions came an appendix.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "收到，今天下雨。",
+        "text": "Got it. It's raining, so I'll skip today.",
         "speakerId": "nora",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "说明很完整。今天用不上。",
+        "text": "A complete guide. Not needed today.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -820,22 +820,22 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S26",
-    "title": "快捷回复。",
+    "title": "Quick reply.",
     "blocks": [
       {
         "kind": "narration",
-        "text": "为了节省时间，Milo 准备了一段常用回复。",
+        "text": "To save time, Milo prepared a reusable reply.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "我补充一下。",
+        "text": "One thing to add. There are two possible cases.",
         "speakerId": "milo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "省下的是开头，没省下正文。",
+        "text": "A shorter opening. Not a shorter message.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -849,21 +849,21 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S27",
-    "title": "目录更新。",
+    "title": "Updated contents.",
     "blocks": [
       {
         "kind": "narration",
-        "text": "笔记越写越厚，需要一份目录。",
+        "text": "The notes grew long enough to need a contents page.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "personAction",
-        "text": "Milo 在目录后加了使用说明。",
+        "text": "Milo added instructions for using the contents page.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "入口也有阅读门槛。",
+        "text": "Even the way in came with homework.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -877,23 +877,23 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S28",
-    "title": "最短的一次。",
+    "title": "The shortest reply.",
     "blocks": [
       {
         "kind": "directQuote",
-        "text": "灯关了吗？",
+        "text": "Did you turn the light off?",
         "speakerId": "nora",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "关了。",
+        "text": "Yes.",
         "speakerId": "milo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "这一次，没有附件。",
+        "text": "No attachment this time.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -907,17 +907,17 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S29",
-    "title": "留给认真解释的人。",
+    "title": "For the one who explains.",
     "interaction": "unlock",
     "blocks": [
       {
         "kind": "narration",
-        "text": "日常不一定需要说明书，但有你就一定有。",
+        "text": "Everyday life doesn't need a manual. With you, it gets one anyway.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "篇幅不设上限，耐心也是。",
+        "text": "No word limit. No shortage of patience.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -930,11 +930,11 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S30",
-    "title": "Milo 的回顾卡。",
+    "title": "Milo's recap card.",
     "blocks": [
       {
         "kind": "narration",
-        "text": "把小事写清楚，把结尾留短一点。",
+        "text": "Explain the little things. Keep the ending short.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -948,11 +948,11 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S23",
-    "title": "Nora 的计划空间。",
+    "title": "Nora, with a plan.",
     "blocks": [
       {
         "kind": "narration",
-        "text": "计划有方向，也留着修改的余地。",
+        "text": "A clear direction. With room for revisions.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -966,22 +966,22 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S24",
-    "title": "日程里的空白。",
+    "title": "Free time.",
     "blocks": [
       {
         "kind": "narration",
-        "text": "Nora 留了一整段自由时间。",
+        "text": "Nora left a whole afternoon free.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "这段可以随意安排。",
+        "text": "We can do whatever we like.",
         "speakerId": "nora",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "然后给自由时间排了三个选项。",
+        "text": "Then she listed three options for doing whatever they liked.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -995,27 +995,27 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S25",
-    "title": "完成了一部分。",
+    "title": "Today's checklist.",
     "interaction": "checklist",
     "blocks": [
       {
         "kind": "narration",
-        "text": "计划先给盆栽浇水，再把工具挂上墙。",
+        "text": "Water the plants. Put the tools on the wall.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "personAction",
-        "text": "浇水：完成。",
+        "text": "Watering: done.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "personAction",
-        "text": "挂工具：改到下次。",
+        "text": "Hanging the tools: next time.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "进度是真的，墙还是空的。",
+        "text": "Real progress. Still a bare wall.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -1028,21 +1028,21 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S26",
-    "title": "备用方案。",
+    "title": "The backup plan.",
     "blocks": [
       {
         "kind": "narration",
-        "text": "出门前，Nora 查了天气。",
+        "text": "Nora checked the weather before heading out.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "personAction",
-        "text": "晴天路线、雨天路线都准备好了。",
+        "text": "One route for sunshine. Another for rain.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "大家最后在门口聊了一个下午。",
+        "text": "They spent the afternoon chatting in the doorway.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -1056,21 +1056,21 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S27",
-    "title": "命名习惯。",
+    "title": "File names.",
     "blocks": [
       {
         "kind": "narration",
-        "text": "第一份计划叫最终版。",
+        "text": "The first plan was called Final.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "personAction",
-        "text": "第二份叫新的最终版。",
+        "text": "The next one was called New Final.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "最后，文件夹叫暂定。",
+        "text": "The folder was called Tentative.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -1084,22 +1084,22 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S28",
-    "title": "真正完成。",
+    "title": "All done.",
     "blocks": [
       {
         "kind": "narration",
-        "text": "清单终于只剩最后一项。",
+        "text": "Every item on today's list was finally ticked.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "给今天的清单画个句号。",
+        "text": "That's it. The rest can wait until tomorrow.",
         "speakerId": "nora",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "这次真的画了。",
+        "text": "Tomorrow's list was already on page two.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -1113,17 +1113,17 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S29",
-    "title": "留给会改计划的人。",
+    "title": "For the one who adapts.",
     "interaction": "unlock",
     "blocks": [
       {
         "kind": "narration",
-        "text": "不是每一步都照着走，依然可以往前。",
+        "text": "You don't have to follow every step to keep moving.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "路线可修改，热情不用。",
+        "text": "Revise the route. Keep the enthusiasm.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -1136,11 +1136,11 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S30",
-    "title": "Nora 的回顾卡。",
+    "title": "Nora's recap card.",
     "blocks": [
       {
         "kind": "narration",
-        "text": "完成一点，也值得留下一张。",
+        "text": "A little progress is worth keeping.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -1154,11 +1154,11 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S23",
-    "title": "Theo 的试用记录。",
+    "title": "Theo, trying things out.",
     "blocks": [
       {
         "kind": "narration",
-        "text": "想知道按钮做什么，先问，再按。偶尔顺序相反。",
+        "text": "Want to know what a button does? Ask, then press. Occasionally in reverse.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -1172,22 +1172,22 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S24",
-    "title": "新的快捷键。",
+    "title": "First print.",
     "blocks": [
       {
         "kind": "narration",
-        "text": "Theo 学会了隐藏窗口。",
+        "text": "The printer did nothing. Theo pressed Print a few more times.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "桌面一下就干净了。",
+        "text": "Did it get that?",
         "speakerId": "theo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "接下来的课程：找回来。",
+        "text": "Once they added paper, it got all five.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -1201,22 +1201,22 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S25",
-    "title": "保存位置。",
+    "title": "Save location.",
     "blocks": [
       {
         "kind": "personAction",
-        "text": "Theo 把草稿存到了一个新文件夹。",
+        "text": "Theo saved the draft in a new folder.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "取个好记的名字。",
+        "text": "Let's give it a name I'll remember.",
         "speakerId": "theo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "文件夹名字叫：这里。",
+        "text": "The folder was called Here.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -1230,28 +1230,28 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S26",
-    "title": "倒计时重新开始。",
+    "title": "A change of colour.",
     "interaction": "restart",
     "blocks": [
       {
         "kind": "narration",
-        "text": "Theo 给泡茶计时器换了颜色。杯子已经摆好，计时还在继续。",
+        "text": "The tea was brewing. A timer tracked how long it had steeped. Theo wanted to change the interface colour.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "personAction",
-        "text": "按下 Restart，计时器回到了起点。",
+        "text": "Restart sent the timer back to zero.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "颜色没变，等茶的时间变长了。",
+        "text": "Same colour. How long has the tea been in?",
         "speakerId": "theo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "测试成功，喝茶延后。",
+        "text": "The tea kept brewing. The record started over.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -1264,22 +1264,17 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S27",
-    "title": "试用报告。",
+    "title": "Test report.",
     "blocks": [
       {
         "kind": "narration",
-        "text": "Nora 问新按钮好不好用。",
+        "text": "Nora asked whether the new button worked well.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "按得下去。",
+        "text": "It goes down.",
         "speakerId": "theo",
-        "provenance": "FICTIONAL_DEMO"
-      },
-      {
-        "kind": "punchline",
-        "text": "报告简洁，但还需要第二轮测试。",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -1293,22 +1288,22 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S28",
-    "title": "这次先看说明。",
+    "title": "Instructions first.",
     "blocks": [
       {
         "kind": "personAction",
-        "text": "Theo 打开 Milo 的指南。",
+        "text": "Theo opened Milo's guide.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "directQuote",
-        "text": "我先泡杯茶。",
+        "text": "I'll make some tea first.",
         "speakerId": "theo",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "阅读准备，比操作充分。",
+        "text": "Better prepared for the reading than the task.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -1322,17 +1317,17 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S29",
-    "title": "留给愿意尝试的人。",
+    "title": "For the one who tries.",
     "interaction": "unlock",
     "blocks": [
       {
         "kind": "narration",
-        "text": "一次试用，会带来一个新发现。",
+        "text": "Every test brings a new discovery.",
         "provenance": "FICTIONAL_DEMO"
       },
       {
         "kind": "punchline",
-        "text": "包括：这个按钮，下次慢一点。",
+        "text": "Sometimes it's which button to press more carefully next time.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],
@@ -1345,11 +1340,11 @@ export const SCREENS: StoryScreen[] = [
   },
   {
     "id": "S30",
-    "title": "Theo 的回顾卡。",
+    "title": "Theo's recap card.",
     "blocks": [
       {
         "kind": "narration",
-        "text": "重新开始，也是一种继续。",
+        "text": "Starting over is still a way forward.",
         "provenance": "FICTIONAL_DEMO"
       }
     ],

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import type { DemoPerson } from "./content-types";
 import { PERIOD, PEOPLE } from "./content.generated";
+import { wrapCardText } from "../lib/card-text";
 export function SaveCard({
   person,
   caption,
@@ -34,27 +35,19 @@ export function SaveCard({
         ctx.fillText(text, 540, y, 840);
       };
       line("BIW WRAPPED", 220, 58);
-      line("虚构演示 / FICTIONAL DEMO", 295, 28);
+      line("FICTIONAL DEMO", 295, 28);
       line(person.name, 490, 100, person.color);
       line(PERIOD, 555, 32);
       line(person.achievement, 740, 60);
       line(person.role, 810, 36);
       line(person.messages.toLocaleString("en-US"), 1070, 142);
-      line("条示例消息", 1140, 38);
-      line(`活跃年份 ${person.activeYear}`, 1290, 40);
-      line(`消息量名次 ${person.rank} / ${PEOPLE.length}`, 1370, 40);
-      const chars = Array.from(caption);
-      let row = "",
-        y = 1500;
-      for (const char of chars) {
-        row += char;
-        if (row.length >= 16) {
-          line(row, y, 38);
-          row = "";
-          y += 58;
-        }
-      }
-      if (row) line(row, y, 38);
+      line("sample messages", 1140, 38);
+      line(`Most active year ${person.activeYear}`, 1290, 40);
+      line(`Message rank ${person.rank} / ${PEOPLE.length}`, 1370, 40);
+      ctx.font = "bold 38px sans-serif";
+      wrapCardText(caption, (text) => ctx.measureText(text).width, 800).forEach(
+        (row, i) => line(row, 1500 + i * 58, 38),
+      );
       line("All characters, stories and numbers are invented.", 1760, 24);
       const blob = await new Promise<Blob>((resolve, reject) =>
         canvas.toBlob(
@@ -70,9 +63,13 @@ export function SaveCard({
       a.click();
       a.remove();
       setTimeout(() => URL.revokeObjectURL(url), 60000);
-      setMessage("图片已生成。浏览器会下载 PNG；不会自动发布。 ");
+      setMessage(
+        "PNG ready. Download requested; nothing is posted automatically.",
+      );
     } catch {
-      setMessage("暂时无法生成，请重试。没有上传任何内容。");
+      setMessage(
+        "Couldn't create the image. Please try again. Nothing was uploaded.",
+      );
     } finally {
       setBusy(false);
     }
@@ -80,10 +77,10 @@ export function SaveCard({
   return (
     <div>
       <button onClick={save} disabled={busy}>
-        {busy ? "正在生成…" : "这张值得一个Story"}
+        {busy ? "Creating PNG…" : "Story-worthy. Save it."}
       </button>
       <p className="small" role="status">
-        {message || "保存 PNG 后，可自行分享到 Story。"}
+        {message || "Downloads a PNG for you to share in your Story."}
       </p>
     </div>
   );

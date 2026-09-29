@@ -91,9 +91,29 @@ try {
     cwd: root,
     encoding: "utf8",
   }).trim();
-  if (remotes) throw new Error("Candidate must have no remote");
+  if (remotes) {
+    if (remotes !== "origin") throw new Error("Unexpected Git remote");
+    const allowed = [
+      "https://github.com/chrislee275/small-talk-wrapped.git",
+      "git@" + "github.com:chrislee275/small-talk-wrapped.git",
+    ];
+    for (const direction of [[], ["--push"]]) {
+      const urls = execFileSync(
+        "git",
+        ["remote", "get-url", ...direction, "--all", "origin"],
+        {
+          cwd: root,
+          encoding: "utf8",
+        },
+      )
+        .trim()
+        .split("\n");
+      if (urls.length !== 1 || !allowed.includes(urls[0]))
+        throw new Error("Remote is not the approved public repository");
+    }
+  }
   console.log(
-    `PASS: ${count} text files and ${commits.length} commits; no remote or secret-like identifiers`,
+    `PASS: ${count} text files and ${commits.length} commits; remote allowlist and identifier checks passed`,
   );
 } catch (error) {
   if (error.status !== 128) throw error;

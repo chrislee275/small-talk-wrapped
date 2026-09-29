@@ -44,19 +44,19 @@ function Block({ block }: { block: StoryBlock }) {
 function Stats({ person }: { person?: DemoPerson }) {
   const total = PEOPLE.reduce((n, p) => n + p.messages, 0);
   return (
-    <section className="panel stats" aria-label="虚构统计">
+    <section className="panel stats" aria-label="Fictional statistics">
       <span className="eyebrow">DEMO DATA / {PERIOD}</span>
       <strong className="big-number">
         {(person?.messages ?? total).toLocaleString("en-US")}
       </strong>
-      <span>条示例消息</span>
+      <span>sample messages</span>
       {person ? (
         <div className="stat-pair">
           <p>
-            最活跃年份<strong>{person.activeYear}</strong>
+            Most active year<strong>{person.activeYear}</strong>
           </p>
           <p>
-            消息量名次
+            Message rank
             <strong>
               {person.rank} / {PEOPLE.length}
             </strong>
@@ -134,8 +134,8 @@ function Signature({
             </div>
             <p>
               {stage > 1 || all
-                ? "正文之后，还有附录。"
-                : "一份等待展开的说明。"}
+                ? "And then there's an appendix."
+                : "Instructions waiting to unfold."}
             </p>
           </>
         )}
@@ -143,11 +143,11 @@ function Signature({
           <ul className="checklist">
             <li>
               <span aria-hidden="true">{stage > 0 || all ? "☑" : "□"}</span>
-              给盆栽浇水
+              Water the plants
             </li>
             <li>
-              <span aria-hidden="true">□</span>把工具挂上墙
-              {stage > 1 || all ? <em>下次再做</em> : null}
+              <span aria-hidden="true">□</span>Hang up the tools
+              {stage > 1 || all ? <em>Next time</em> : null}
             </li>
           </ul>
         )}
@@ -155,12 +155,12 @@ function Signature({
           <>
             <span className="eyebrow">TEA TIMER / DEMO</span>
             <div className="timer-number">
-              {stage > 0 || all ? "00:00" : "进行中"}
+              {stage > 0 || all ? "00:00" : "Running"}
             </div>
             <p>
               {stage > 0 || all
-                ? "计时已重新开始。"
-                : "这里的按钮，只揭晓故事结果。"}
+                ? "Timer restarted."
+                : "Press Restart to see what happened."}
             </p>
           </>
         )}
@@ -169,11 +169,11 @@ function Signature({
             {screen.interaction === "restart"
               ? "Restart"
               : screen.interaction === "paper"
-                ? "展开说明"
-                : "开始揭晓"}
+                ? "Unroll the guide"
+                : "Reveal the results"}
           </button>
         )}
-        {stage > 0 && !isDone && <p role="status">正在揭晓…</p>}
+        {stage > 0 && !isDone && <p role="status">Revealing…</p>}
       </div>
       {isDone && (
         <div className="signature-result">
@@ -211,25 +211,25 @@ function Quantity({
     <>
       <Block block={screen.blocks[0]} />
       <div className="panel quantity">
-        <div className="pot-row" aria-label={`${planned} 只花盆`}>
+        <div className="pot-row" aria-label={`${planned} plant pots`}>
           {Array.from({ length: planned }, (_, i) => i).map((i) => (
             <span key={i}>▣</span>
           ))}
         </div>
-        <span className="eyebrow">花盆 {planned} / 种子袋</span>
+        <span className="eyebrow">Pots {planned} / Drip trays</span>
         <strong className="big-number">{done ? actual : "?"}</strong>
         <div
           className="seeds"
-          aria-label={`${done ? actual : Math.min(count, actual)} 份种子`}
+          aria-label={`${done ? actual : Math.min(count, actual)} drip trays`}
         >
           {Array.from({ length: actual }, (_, i) => i).map((i) => (
             <span key={i} data-visible={done || i < count}>
-              ▥
+              ▰
             </span>
           ))}
         </div>
         {!started && !instant && (
-          <button onClick={() => setStarted(true)}>拆开看看</button>
+          <button onClick={() => setStarted(true)}>Open the package</button>
         )}
       </div>
       {done &&
@@ -275,7 +275,9 @@ function Achievement({
             disabled={phase === "opening"}
           >
             <Lock />
-            <span>{phase === "opening" ? "正在解锁…" : "点击解锁成就"}</span>
+            <span>
+              {phase === "opening" ? "Unlocking…" : "Unlock achievement"}
+            </span>
           </button>
         )}
       </div>
@@ -318,10 +320,13 @@ function Ending({
       </div>
       {!all && !finished && (
         <button className="quiet" onClick={() => setPaused((p) => !p)}>
-          {paused ? "继续字幕" : "暂停字幕"}
+          {paused ? "Resume credits" : "Pause credits"}
         </button>
       )}
-      <div className="friends" aria-label="三个虚构朋友的抽象背影">
+      <div
+        className="friends"
+        aria-label="Abstract rear views of three fictional friends"
+      >
         {PEOPLE.map((p) => (
           <span key={p.id} style={{ color: p.color }}>
             <i />
@@ -449,7 +454,7 @@ function Screen({
       <>
         <p>{screen.blocks[0].text}</p>
         <fieldset className="people">
-          <legend>选择虚构人物</legend>
+          <legend>Choose a fictional character</legend>
           {PEOPLE.map((p) => (
             <label
               key={p.id}
@@ -488,7 +493,7 @@ function Screen({
           <Portrait person={person} />
           <strong>{person.name}</strong>
         </div>
-        <span className="eyebrow">虚构演示 / FICTIONAL DEMO</span>
+        <span className="eyebrow">FICTIONAL DEMO</span>
         <h2>{person.achievement}</h2>
         <p>{person.role}</p>
         <Stats person={person} />
@@ -557,17 +562,17 @@ function Screen({
             ▪ ▪ ▪
           </span>
         </header>
-        <nav className="topbar" aria-label="旅程导航">
+        <nav className="topbar" aria-label="Story navigation">
           <button
             className="back-button quiet"
             disabled={!canBack}
             onClick={back}
-            aria-label="返回上一屏"
+            aria-label="Previous screen"
           >
             <Arrow back />
           </button>
           <span>{Number(screen.id.slice(1)) + 1} / 32</span>
-          <span className="demo-badge">虚构演示</span>
+          <span className="demo-badge">Fictional demo</span>
         </nav>
         <section className="content">
           <span className="eyebrow">{screen.eyebrow}</span>
@@ -582,7 +587,7 @@ function Screen({
                 complete();
               }}
             >
-              显示全部
+              Show all
             </button>
           )}
           {content}
@@ -590,14 +595,14 @@ function Screen({
         <footer>
           {screen.id === "S31" ? (
             <>
-              <button onClick={switchRoute}>换个视角继续看</button>
+              <button onClick={switchRoute}>Try another perspective</button>
               <button className="secondary" onClick={restart}>
-                从开头再看
+                Start again
               </button>
             </>
           ) : screen.id === "S01" ? (
             <button onClick={next} disabled={!selected}>
-              选好了，继续
+              Continue
             </button>
           ) : (
             <>
@@ -606,20 +611,20 @@ function Screen({
               )}
               {screen.id === "S00" ? (
                 <button onClick={next} disabled={!ready}>
-                  打开这本日常
+                  Open the story
                 </button>
               ) : (
                 <div className="next-wrap">
                   <p className="small">
                     {done || reduced
-                      ? "读完后，再上滑继续"
-                      : "继续阅读，或选择显示全部"}
+                      ? "Finished reading? Swipe up to continue."
+                      : "Keep reading, or choose Show all."}
                   </p>
                   <button
                     className="next-button"
                     onClick={next}
                     disabled={!done}
-                    aria-label="下一屏"
+                    aria-label="Next screen"
                   >
                     <Arrow />
                   </button>

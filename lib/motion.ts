@@ -2,8 +2,10 @@ export const ENTRY_MS = 260;
 export const UNLOCK_MS = 700;
 export function readingHold(text: string, punchline = false) {
   return (
-    Math.min(3200, Math.max(650, Array.from(text).length * 42)) +
-    (punchline ? 700 : 0)
+    Math.min(
+      6000,
+      Math.max(650, text.trim().split(/\s+/).filter(Boolean).length * 250),
+    ) + (punchline ? 700 : 0)
   );
 }
 export function remainingHold(

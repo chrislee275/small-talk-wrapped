@@ -1,20 +1,25 @@
-# BIW Wrapped
+# Small Talk Wrapped
 
-**A mobile-first, text-first interactive retrospective — three fictional perspectives, one shared story.**
+The fictional portfolio edition of BIW Wrapped.
 
-Portfolio candidate · React + TypeScript + vinext · Local-only release
+**A mobile-first interactive story that turns a fictional group chat into three personal retrospectives.**
 
-> All characters, dialogue, dates, statistics and artwork in this repository are fictional demonstration material. This is not an anonymized chat archive. No private source records, portraits, hosting credentials or original Git history are included.
+React · TypeScript · vinext
+
+> Fictional portfolio demo: all story characters, dialogue, dates and statistics are invented. The illustrative assets are original; no private chat records or portraits of real people are included.
+
+**My role:** I directed the product concept, visual direction, interaction requirements and review decisions, using AI assistance for implementation and test authoring. The focus is reader-controlled pacing: a shared story, one personal perspective and a few deliberate moments of interaction.
 
 ## A small story, built as a product
 
-Choose Milo, Nora or Theo. Follow a common retrospective, explore a personal branch, unlock an achievement and download a clearly labelled fictional PNG card. The journey has 32 screens per person, backed by 48 content records rather than 96 duplicated screens.
+Choose Milo, Nora or Theo. Follow a common retrospective, explore a personal branch, unlock an achievement and download a PNG card. Each journey contains 32 screens: 24 shared screens and eight character-specific screens. The three branches use 48 content records in total.
 
-| Choose a perspective                                            | Reveal a story                                                     | Keep a fictional card                                            |
-| --------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------- |
-| ![Three fictional character choices](docs/images/selection.png) | ![Milo's unfolding paper interaction](docs/images/interaction.png) | ![A fictional personal summary card](docs/images/share-card.png) |
+| Choose a perspective                                            | Reveal a story                                                                            | Keep a fictional card                                                              |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| ![Three fictional character choices](docs/images/selection.png) | ![Milo's unfolding paper interaction](docs/images/interaction.png)                        | ![A fictional personal summary card](docs/images/share-card.png)                   |
+| Choose one character; no perspective is preselected.            | Unfold an elaborate watering guide, then discover that today's rain makes it unnecessary. | Keep a character summary as a locally generated PNG, labelled as a fictional demo. |
 
-The interface is Chinese to preserve the compact conversational rhythm. English headings and the guide below explain how to explore it.
+The demo is English-only, including story dialogue, controls, accessibility labels and downloadable cards. The stories use short conversational exchanges rather than a literal translation of the earlier draft.
 
 ## Run locally
 
@@ -32,16 +37,16 @@ npm run build
 npm start
 ```
 
-### English interaction guide
+### Interaction guide
 
-- **打开这本日常** — start the journey.
-- Choose a character, then **选好了，继续** — continue. There is no default selection.
+- **Open the story** starts the journey.
+- Choose a character, then **Continue**. There is no default selection.
 - Use the down arrow to advance. Scrolling reads the page first; a separate upward swipe at the bottom may advance. No screen auto-advances.
-- **显示全部** — show all content without waiting for motion.
-- **展开说明 / 开始揭晓 / Restart** — reveal the fictional outcome, not choose a different past.
-- **点击解锁成就** — unlock an achievement.
-- **这张值得一个Story** — download a PNG, not automatically post to a social network.
-- At the end, **换个视角继续看** selects another person and skips the common chapters; **从开头再看** restarts. Refresh returns to the safe opening.
+- **Show all** reveals content without waiting for motion.
+- **Unroll the guide / Reveal the results / Restart** reveal the fictional outcome, not a choice of a different past.
+- **Unlock achievement** reveals the character's award.
+- **Story-worthy. Save it.** downloads a PNG; it does not post to a social network.
+- At the end, **Try another perspective** selects another person and skips the common chapters; **Start again** restarts. Refresh returns to the safe opening.
 
 ## What this demonstrates
 
@@ -54,15 +59,15 @@ npm start
 
 The visual language uses stepped pixel controls, cream story surfaces, neutral evidence panels and a navy finale. It uses no third-party game artwork, external fonts or runtime image services. Three original geometric SVG portraits stay small without a high-resolution photo pipeline.
 
-Headings and the first beat appear immediately. Later reveals count time already spent reading, while punchlines retain a short hold. The name montage starts only when visible and pauses offscreen. Long content scrolls naturally; controls are not pinned over text.
+Ordinary story screens show their heading and first passage immediately. Later reveals count time already spent reading, while punchlines retain a short hold. The name montage starts only when visible and pauses offscreen. The ending uses a separate, pausable credits sequence. Long content scrolls naturally; controls are not pinned over text.
 
 Statistics, ranks and export cards read from the same fictional dataset. The export is rendered locally to a 1080 × 1920 canvas and visibly marked as fictional. Nothing is uploaded.
 
 ## Authorship and AI collaboration
 
-The project owner directed the concept, visual intent, interaction requirements, privacy boundaries and review decisions. AI assistance was used for implementation, fictional fixture drafting, geometric asset code and automated test authoring. The candidate is AI-assisted work, not a claim of entirely handwritten code or independently reviewed accessibility certification.
+I set the experience requirements and privacy boundaries, reviewed iterations, and requested changes to pacing, visual hierarchy and interactions. AI assistance produced implementation code, fictional story drafts, geometric asset code and automated tests. Design direction and acceptance decisions remain my responsibility; the implementation is not presented as entirely handwritten work.
 
-Human acceptance of this public candidate and its final licensing is still pending. Automated results are recorded separately from real-device and assistive-technology testing in [QA](docs/2026-09-26-qa.md).
+The [case study](docs/2026-09-26-case-study.md) explains the tradeoffs. [English-edition checks](docs/2026-09-27-english-edition.md) cover the current copy and layout; the [initial QA record](docs/2026-09-26-qa.md) records the earlier build and clean-install checks. Real-device and assistive-technology checks remain unverified.
 
 ## Verify
 
@@ -83,4 +88,4 @@ Browser tests cover the three journeys, boundary states and viewport scenarios. 
 
 This is a portfolio candidate, not a general-purpose CMS or analytics product. The vinext dependency is pinned to a beta release; no hosting workflow or automated deployment is provided. Synthetic data demonstrates interaction design, not real-world group analysis.
 
-No open-source license has been selected. Public release and reuse terms require owner approval. Third-party packages retain their respective licenses; see [notices](THIRD_PARTY_NOTICES.md). There is no public repository or live demo created by this candidate.
+Source publication is authorised under `chrislee275/small-talk-wrapped`. No hosted demo is provided. No open-source license has been selected; this repository does not grant a general license to reuse its code or artwork. Third-party packages retain their respective licenses; see [notices](THIRD_PARTY_NOTICES.md).

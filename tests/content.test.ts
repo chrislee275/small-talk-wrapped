@@ -10,10 +10,26 @@ import {
   validState,
 } from "../lib/story-state.ts";
 import { ScrollGate } from "../lib/scroll-gate.ts";
-import { remainingHold } from "../lib/motion.ts";
+import { remainingHold, readingHold } from "../lib/motion.ts";
+import { wrapCardText } from "../lib/card-text.ts";
 const demo = JSON.parse(
   readFileSync(new URL("../content/demo.json", import.meta.url), "utf8"),
 );
+
+test("English copy, reading holds and word-safe card captions", () => {
+  assert.doesNotMatch(JSON.stringify(demo), /\p{Script=Han}/u);
+  assert.equal(readingHold("One two three four"), 1000);
+  assert.equal(readingHold("One two three four", true), 1700);
+  assert.equal(readingHold(""), 650);
+  assert.equal(readingHold("word ".repeat(100)), 6000);
+  const rows = wrapCardText(
+    "Keep the ending short.",
+    (text) => text.length,
+    12,
+  );
+  assert.deepEqual(rows, ["Keep the", "ending", "short."]);
+  assert.equal(rows.join(" "), "Keep the ending short.");
+});
 
 test("48 fictional blocks cover three complete 32-screen journeys", () => {
   assert.equal(
@@ -128,9 +144,9 @@ test("touch preserves natural scrolling and elapsed reading time avoids another 
   };
   assert.equal(gate.touch(swipe), false);
   assert.equal(gate.touch({ ...swipe, startAtBottom: true }), true);
-  assert.equal(remainingHold(0, 10000, "短句", true), 0);
+  assert.equal(remainingHold(0, 10000, "Short sentence", true), 0);
   assert.ok(
-    remainingHold(1000, 1000, "短句", true) >
-      remainingHold(1000, 1000, "短句", false),
+    remainingHold(1000, 1000, "Short sentence", true) >
+      remainingHold(1000, 1000, "Short sentence", false),
   );
 });

@@ -20,6 +20,14 @@ The visual system borrows the _idea_ of everyday pixel software: low-detail prop
 
 ## Evaluation
 
+### Example: waiting should serve the story
+
+The experience needed staged reveals without making each new screen feel empty. The chosen rule is to show the first passage immediately on ordinary screens, then delay later content according to reading time and visibility. A separate Show All control lets readers bypass the wait. This keeps a pause before a punchline without making motion mandatory.
+
+The group-name montage exposed a more specific problem during candidate QA: a small portion near the bottom of the viewport could start the sequence before the reader reached it. Its trigger was tightened to require entry into the reading area. The browser case verifies that it waits before entry, pauses offscreen and does not navigate when finished. This is evidence of trigger behavior, not proof that the pacing feels right to every reader.
+
+The next acceptance question is editorial: does each reveal earn its pause? Human story review and physical-device testing remain necessary. There is no measured engagement or conversion uplift to report.
+
 This candidate's measurements and validation are listed in QA. No loading-speed claim is inferred from file size, and no automated viewport check is presented as real-device testing. Further human review should evaluate whether each joke lands naturally, not just whether timers fire.
 
 ## What changed for public presentation
